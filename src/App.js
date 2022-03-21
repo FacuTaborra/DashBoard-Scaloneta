@@ -8,8 +8,9 @@ import products from './components/products/Products.js'
 function App() {
   return (
     <div className="App">
-      <Route path='/' component={Header}/>
-      <Route path='/' component={Footer}/>
+      <Header/>
+      <Route path='/Header' component={Header}/>
+      <Route  exact path='/' component={Footer}/>
       <span>hola</span>
     </div>
   );
