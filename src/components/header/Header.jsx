@@ -6,9 +6,6 @@ function Header(){
     return (
         <div className="header">
             <span>hola</span>
-            <ul>
-                <li>hola</li>
-            </ul>
         </div>
     );
 }
