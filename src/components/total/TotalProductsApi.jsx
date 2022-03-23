@@ -21,6 +21,15 @@ class TotalProductsApi extends Component{
         .catch(e => console.log(e))
     }
 
+	componentDidUpdate(){
+		fetch('http://localhost:3000/api/products/')
+        .then(rtaDB => rtaDB.json())
+        .then(products => {
+			console.log(products)
+            this.setState( {total:products.count} );
+        })
+	}
+
     render(){
 		return(
 			<div>
