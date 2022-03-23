@@ -10,24 +10,25 @@ class TotalProductsApi extends Component{
 		}
 	}
 
-	componentDidMount(){
-		console.log("hola")
-        fetch('http://localhost:3000/api/products/')
-        .then(rtaDB => rtaDB.json())
-        .then(products => {
-			console.log(products)
-            this.setState( {total:products.count} );
-        })
+	apiCall(url, consecuencia){
+		fetch(url)
+        .then(response => response.json())
+        .then(data => consecuencia(data))
         .catch(e => console.log(e))
+	}
+
+	componentDidMount(){
+		this.apiCall('http://localhost:3000/api/products/', this.mostarCantidad)
     }
 
 	componentDidUpdate(){
-		fetch('http://localhost:3000/api/products/')
-        .then(rtaDB => rtaDB.json())
-        .then(products => {
-			console.log(products)
-            this.setState( {total:products.count} );
-        })
+		this.apiCall('http://localhost:3000/api/products/', this.mostarCantidad)
+	}
+
+	mostarCantidad = (products) => {
+		this.setState({
+			total: products.count
+		})
 	}
 
     render(){

@@ -10,29 +10,25 @@ class TotalCategoryApi extends Component{
 		}
 	}
 
+	apiCall(url, consecuencia){
+		fetch(url)
+        .then(response => response.json())
+        .then(data => consecuencia(data))
+        .catch(e => console.log(e))
+	}
+
 	componentDidMount(){
-        fetch('http://localhost:3000/api/products/')
-        .then(data => {
-			return data.json()
-		})
-        .then(Products => {
-			console.log(Products)
-            this.setState( {total:Products.countByCategory.length} );
-			console.log(this.state)
-        })
-        .catch(e => console.log("No hay categorias"))
+		this.apiCall('http://localhost:3000/api/products/', this.mostarCantidad)
     }
 
 	componentDidUpdate(){
-		fetch('http://localhost:3000/api/products/')
-        .then(data => {
-			return data.json()
+		this.apiCall('http://localhost:3000/api/products/', this.mostarCantidad)
+	}
+
+	mostarCantidad = (products) => {
+		this.setState({
+			total: products.countByCateory
 		})
-        .then(Products => {
-			console.log(Products)
-            this.setState( {total:Products.countByCategory.length} );
-			console.log(this.state)
-        })
 	}
 
     render(){

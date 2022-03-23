@@ -10,22 +10,25 @@ class TotalUsersApi extends Component{
 		}
 	}
 
-	componentDidMount(){
-		console.log("hola")
-        fetch('http://localhost:3000/api/users/')
-        .then(rtaDB => rtaDB.json())
-        .then(users => {
-            this.setState( {total:users.total} );
-        })
+	apiCall(url, consecuencia){
+		fetch(url)
+        .then(response => response.json())
+        .then(data => consecuencia(data))
         .catch(e => console.log(e))
+	}
+
+	componentDidMount(){
+		this.apiCall('http://localhost:3000/api/users/', this.mostarCantidad)
     }
 
 	componentDidUpdate(){
-		fetch('http://localhost:3000/api/users/')
-        .then(rtaDB => rtaDB.json())
-        .then(users => {
-            this.setState( {total:users.total} );
-        })
+		this.apiCall('http://localhost:3000/api/users/', this.mostarCantidad)
+	}
+
+	mostarCantidad = (users) => {
+		this.setState({
+			total: users.total
+		})
 	}
 
     render(){
