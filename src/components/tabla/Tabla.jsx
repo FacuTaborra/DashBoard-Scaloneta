@@ -2,6 +2,7 @@ import React from "react";
 import "./tabla.css"
 import Cabezal from './Cabezal'
 import Rows from './Rows'
+import { Link, Route, Switch } from "react-router-dom";
 
 function Tabla(props){
 
