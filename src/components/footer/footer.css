@@ -7,3 +7,13 @@
    align-items: center;
 }
 
+
+.box{
+    display: flex;
+    align-items: center;
+}
+
+.logo2{
+    width: 30px;
+    margin: 5px;
+}
