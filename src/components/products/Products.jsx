@@ -1,9 +1,10 @@
 import React from "react";
-/* import { Link, Route, Router, Switch } from 'react-router-dom'; */
-import "./products.css";
+import Tabla from "../tabla/Tabla";
 
 function Products() {
-  return <div className="products"></div>;
-}
+  return (
+    <Tabla titulo = "Productos" band = "1"/>
+  );
+} 
 
 export default Products;

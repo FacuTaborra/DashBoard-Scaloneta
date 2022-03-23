@@ -27,7 +27,7 @@ class TotalCategoryApi extends Component{
 
 	mostarCantidad = (products) => {
 		this.setState({
-			total: products.countByCateory
+			total: products.countByCategory.length
 		})
 	}
 

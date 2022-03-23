@@ -16,20 +16,23 @@ function App() {
   return (
     <div>
       <Header />
+
       <div className="conteiner-full">
-      <TotalProductsApi />
-      <TotalUserApi />
-      <TotalCategoryApi />
+        <TotalProductsApi />
+        <TotalUserApi />
+        <TotalCategoryApi />
       </div>
       <div className="conteiner-ultP">
-      <LastProduct />
-      <LastUser />
+        <LastProduct />
+        <LastUser />
       </div>
+
       <Switch>
         <Route path="/products" component={Products} />
         <Route path="/categories" component={Categories} />
         <Route path="/users" component={Users} />
       </Switch>
+      
       <Footer />
     </div>
   );
