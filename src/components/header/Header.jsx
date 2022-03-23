@@ -2,9 +2,7 @@ import React from "react";
 import { Link, Route, Switch } from 'react-router-dom';
 import logo from './logo4.png'
 import './header.css'
-import Products from "../products/Products.jsx";
-import Users from "../users/Users.jsx";
-import Categories from "../categories/Categories.jsx";
+
 
 function Header(){
     return (
@@ -23,9 +21,6 @@ function Header(){
                     <Link to = "/products">Productos</Link>
                     <Link to = "/categories">Categorias</Link>
                     <Link to = "/users">Usuarios</Link>
-                    <Route path = "/products" component={Products} />
-                    <Route path = "/categories" component={Categories}/>
-                    <Route path = "/users" component={Users} />
                 </div>
                 <div class="header-center-simple">
                     <h4>SCALONETA SHOP</h4>
