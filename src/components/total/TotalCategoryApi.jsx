@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import Categories from '../categories/Categories.jsx';
 
 import Total from './Total.jsx';
 
@@ -11,14 +12,16 @@ class TotalCategoryApi extends Component{
 	}
 
 	componentDidMount(){
-		console.log("hola")
         fetch('http://localhost:3000/api/products/')
-        .then(rtaDB => rtaDB.json())
-        .then(products => {
-			console.log(products)
-            this.setState( {total:products.countByCategory.length} );
+        .then(data => {
+			return data.json()
+		})
+        .then(Categories => {
+			console.log(Categories)
+            this.setState( {total:Categories.countByCategory.length} );
+			console.log(this.state)
         })
-        .catch(e => console.log(e))
+        .catch(e => console.log("No hay categorias"))
     }
 
     render(){
