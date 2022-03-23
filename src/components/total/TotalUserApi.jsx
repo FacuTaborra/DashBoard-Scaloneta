@@ -20,6 +20,14 @@ class TotalUsersApi extends Component{
         .catch(e => console.log(e))
     }
 
+	componentDidUpdate(){
+		fetch('http://localhost:3000/api/users/')
+        .then(rtaDB => rtaDB.json())
+        .then(users => {
+            this.setState( {total:users.total} );
+        })
+	}
+
     render(){
 		return(
 			<div>
