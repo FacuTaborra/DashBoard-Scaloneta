@@ -1,12 +1,12 @@
 .conteiner{
     margin: 15px;
     height: 100px;
-    width: 150px;
+    width: 300px;
     background-color: #75b2caad;
     border: 2px solid black;
     border-radius: 5px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     justify-content: center;
     align-items: center;    
 }
