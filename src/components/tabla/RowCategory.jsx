@@ -24,7 +24,6 @@ class RowCategory extends Component{
 	}
 
     armaFilas = (data) => {
-        console.log(data.countByCategory)
         this.setState({
             rows: data.countByCategory.map(category => {
             return (
