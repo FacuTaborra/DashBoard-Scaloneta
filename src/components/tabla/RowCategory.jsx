@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 
-class Rows extends Component{
+class RowCategory extends Component{
 	constructor (){
 		super();
 		this.state = {
@@ -24,19 +24,14 @@ class Rows extends Component{
 	}
 
     armaFilas = (data) => {
+        console.log(data.countByCategory)
         this.setState({
-            rows: data.products.map(product => {
+            rows: data.countByCategory.map(category => {
             return (
             <tr>
-                <th>{product.id}</th>
-                <th>{product.name}</th>
-                <th>{product.discount}</th>
-                <th>{product.detail}</th>
-                <th>{product.stock}</th>
-                <th>{product.category}</th>
-                <th>{product.price}</th>
-                <th>{product.size}</th>
-                <th>{product.img}</th>
+                <th>{category.id_category}</th>
+                <th>{category.name}</th>
+                <th>{category.count_products}</th>
             </tr>)
         })})
     }
@@ -50,4 +45,4 @@ class Rows extends Component{
 	}
 	
 }
-export default Rows;
+export default RowCategory;
