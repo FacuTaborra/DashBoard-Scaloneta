@@ -27,7 +27,7 @@ class LastProduct extends Component {
   }
 
   componentDidUpdate() {
-    this.apiCall("http://localhost:3000/api/products/", this.showLastProduct);
+    this.apiCall("http://localhost:3000/api/products/", this.showLastProduct)
   }
 
   render() {

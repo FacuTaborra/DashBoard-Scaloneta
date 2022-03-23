@@ -25,17 +25,13 @@ function Tabla(props){
             <th>Nombre</th>
             <th>cantidad Productos</th>
         </tr>
-    }else{
+    }else if (props.band == 3){
         cabezal = 
         <tr>
             <th>id</th>
             <th>Nombre</th>
-            <th>apellido</th>
+            <th>detalle</th>
             <th>email</th>
-            <th>Fecha de Nacimiento</th>
-            <th>Genero</th>
-            <th>Telefono</th>
-            <th>Imagen</th>
         </tr>
     }
 

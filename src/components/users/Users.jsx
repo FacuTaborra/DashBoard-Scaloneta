@@ -1,12 +1,9 @@
 import React from "react";
-import { Link, Route, Router, Switch } from 'react-router-dom';
-import './users.css'
+import Tabla from "../tabla/Tabla";
 
 function Users(){
     return (
-        <div className="Users">
-            
-        </div>
+        <Tabla titulo = "Usuarios" band = "3"/>
     );
 }
 
