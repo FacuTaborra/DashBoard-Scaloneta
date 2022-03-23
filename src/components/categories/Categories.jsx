@@ -5,7 +5,7 @@ import Tabla from "../tabla/Tabla";
 
 function Categories() {
   return (  
-    <Tabla titulo = "Categorias" band = "2"/>
+    <Tabla titulo = "CATEGORIAS" band = "2"/>
   )
          
 }

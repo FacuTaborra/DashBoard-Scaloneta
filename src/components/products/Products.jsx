@@ -3,7 +3,7 @@ import Tabla from "../tabla/Tabla";
 
 function Products() {
   return (
-    <Tabla titulo = "Productos" band = "1"/>
+    <Tabla titulo = "PRODUCTOS" band = "1"/>
   );
 } 
 

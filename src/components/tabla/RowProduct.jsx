@@ -38,7 +38,7 @@ class RowProduct extends Component{
                 <th>{product.category}</th>
                 <th>{product.price}</th>
                 <th>{product.size}</th>
-                <th><a href={product.img}>{product.img}</a></th>
+                <th><a href={product.img}>imagen</a></th>
             </tr>)
         })})
     }
