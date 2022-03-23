@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Route, Router, Switch } from 'react-router-dom';
+/* import { Link, Route, Router, Switch } from 'react-router-dom'; */
 import './products.css'
 
 function Products(){
